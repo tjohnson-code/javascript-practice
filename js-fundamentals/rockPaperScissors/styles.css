@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(52, 102, 97);
+    color: rgb(141, 203, 141);
+}
+
+#main, #gameCount {
+    display: flex;
+    justify-content: space-evenly;
+}
+#rpsButtons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+#playerChoice, #computerChoice, #playerWins, #computerWins, #ties, #totalGames {
+    display: flex;
+    justify-content: center;
+    color:rgb(25, 188, 27);
+}
+#choiceTitle, #resultTitle, #totalTitle {
+    text-decoration: underline;
+}
+#results {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#gameResult {
+    color:rgb(241, 234, 236);
+}
+#counters {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#playerWins, #computerWins, #ties, #totalGames {
+    color:rgb(241, 234, 236);
+}
