@@ -7,6 +7,12 @@ function gameRPS() {
     const btnPressed = document.getElementById('playerChoice');
     const arrayRPS = ['Rock', 'Paper', 'Scissors'];
     const resultRPS = document.getElementById('gameResult');
+    const playerWins = document.getElementById('playerWins');
+    const computerWins = document.getElementById('computerWins');
+    const ties = document.getElementById('ties');
+    let tieCount = 0;
+    let winCount = 0;
+    let loseCount = 0;
 
     rockBtn.addEventListener('click', () => {
         btnPressed.textContent = 'Rock'
@@ -15,11 +21,17 @@ function gameRPS() {
         computerOutput.textContent = computerChoice;
         console.log(computerChoice);
         if (computerChoice === 'Rock') {
+            tieCount ++;
             resultRPS.textContent = 'Tie Game!'
+            ties.textContent = tieCount;
         }else if (computerChoice === 'Paper') {
+            loseCount ++;
             resultRPS.textContent = 'You Lose!'
+            computerWins.textContent = loseCount;
         }else {
+            winCount ++;
             resultRPS.textContent = 'You Win!'
+            playerWins.textContent = winCount;
         }
     });
     paperBtn.addEventListener('click', () => {
@@ -29,11 +41,17 @@ function gameRPS() {
         computerOutput.textContent = computerChoice;
         console.log(computerChoice);
         if (computerChoice === 'Paper') {
+            tieCount ++;
             resultRPS.textContent = 'Tie Game!'
+            ties.textContent = tieCount;
         }else if (computerChoice === 'Scissors') {
+            loseCount ++;
             resultRPS.textContent = 'You Lose!'
+            computerWins.textContent = loseCount;
         }else {
+            winCount ++;
             resultRPS.textContent = 'You Win!'
+            playerWins.textContent = winCount;
         }
     });
     scissorsBtn.addEventListener('click', () => {
@@ -43,11 +61,17 @@ function gameRPS() {
         computerOutput.textContent = computerChoice;
         console.log(computerChoice);
         if (computerChoice === 'Scissors') {
+            tieCount ++;
             resultRPS.textContent = 'Tie Game!'
+            ties.textContent = tieCount;
         }else if (computerChoice === 'Rock') {
+            loseCount ++;
             resultRPS.textContent = 'You Lose!'
+            computerWins.textContent = loseCount;
         }else {
+            winCount ++;
             resultRPS.textContent = 'You Win!'
+            playerWins.textContent = winCount;
         }
     });
 }
