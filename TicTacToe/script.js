@@ -39,21 +39,22 @@ function initialize() {
         //for loop for columns
         for (col = 0; col < GRIDSIZE; col++) {
             htmlCode += 
-            '<div onClick="markIt('+
-            row+
-            ','+
-            col+
-            ')" id="'+
-            row+
-            '_'+
-            col+
-            '" class="col-'+
-            colSize+
-            ' h-100 bg-primary bg-gradient border border-info shadow d-flex align-items-center justify-content-center fs-1">'+
-            boxNumber+++'('+
-            row+
-            ','+
-            col+
+            '<div onClick="markIt(' +
+            row +
+            ',' +
+            col +
+            ')" id="' +
+            row +
+            '_' +
+            col +
+            '" class="col-' +
+            colSize +
+            ' h-100 bg-primary bg-gradient border border-info shadow d-flex align-items-center justify-content-center fs-1">' +
+            boxNumber++ +
+            '(' +
+            row +
+            ',' +
+            col +
             ')</div>';
         }
         htmlCode += '</div>';
@@ -177,6 +178,7 @@ function checkBoard() {
     if (boardArray[0][2] == oMark && boardArray[1][1] == oMark && boardArray[2][0] == oMark) {
         return oMark + " is the diagonal winner!";
     }
+
 
     return false;
 }
